@@ -1,0 +1,27 @@
+<div class="gallery-container">
+    <div class="gallery" id="gallery">
+
+    </div>
+    <button class="prev-btn" onclick="prevImage()">&#10094; Prev</button>
+    <button class="next-btn" onclick="nextImage()">Next &#10095;</button>
+</div>
+<script>
+    const imageUrls = ['https://i.imgur.com/wBGEW7q.jpg', 'https://i.imgur.com/NaiQ9ov.jpg', 'https://i.imgur.com/Rg2sYJn.jpg'];
+
+    function loadGallery() {
+    const gallery = document.getElementById("gallery");
+
+    imageUrls.forEach(url => {
+        const galleryItem = document.createElement("div");
+        galleryItem.className = "gallery-item";
+
+        const img = document.createElement("img");
+        img.src = url;
+        img.alt = "Imgur Image";
+
+        galleryItem.appendChild(img);
+        gallery.appendChild(galleryItem);
+    });
+}
+document.addEventListener("DOMContentLoaded", loadGallery);
+</script>

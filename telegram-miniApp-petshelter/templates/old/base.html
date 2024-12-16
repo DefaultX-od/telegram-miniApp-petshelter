@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width, height=device-height, target-densitydpi=device-dpi">
+<!--     <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>{% block title %}Petshelter Web App{% endblock %}</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+</head>
+<body>
+    <header class="header">
+        <div class="header-icon">
+          {% block header_img %}
+            <!--<img src="static/img/home-active.png" alt="Главная" class="icon">-->
+          {% endblock %}
+             <!-- Здесь добавьте путь к иконке дома -->
+        </div>
+        <h1>{% block header_text %}{% endblock %}</h1>
+    </header>
+
+    <main class="main-content">
+        {% block content %}
+
+        {% endblock %}
+    </main>
+
+    <footer class="footer">
+        <a href="{{ url_for('open_main_page') }}">
+        <div class="footer-icon">
+            {% block image_footer_home %}
+                <img src="static/img/home.png" alt="Главная" class="icon">
+            {% endblock %}
+        </div>
+        </a>
+        <a href="{{ url_for('open_pets_page') }}">
+            <div class="footer-icon">
+                {% block image_footer_pets %}
+                    <img src="static/img/pets.png" alt="Животные" class="icon">
+                {% endblock %}
+            </div>
+        </a>
+        <div class="footer-icon">
+            {% block image_footer_application %}
+                <img src="static/img/application.png" alt="Заявки" class="icon"> <!-- Здесь добавьте путь к иконке заметок -->
+            {% endblock %}
+        </div>
+        <div class="footer-icon">
+            {% block image_footer_account %}
+                <img src="static/img/account.png" alt="Профиль" class="icon">
+            {% endblock %}
+            <!--
+            Здесь добавьте путь к иконке профиля -->
+        </div>
+    </footer>
+</body>
+</html>

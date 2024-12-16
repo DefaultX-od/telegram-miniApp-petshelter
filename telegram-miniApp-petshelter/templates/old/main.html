@@ -1,0 +1,30 @@
+    {% extends "base.html" %}
+
+    {% block title %}Главная{% endblock %}
+
+    {% block header_img %}
+
+         <img src="static/img/home-active.png" alt="Главная" class="icon">
+
+    {% endblock %}
+
+    {% block header_text %}Главная{% endblock %}
+
+    {% block content %}
+
+        <div class="card">
+            <img src="static/img/cat.png" alt="Кошки" class="card-icon"> <!-- Здесь добавьте путь к иконке кошки -->
+            <span class="card-title">Кошки</span>
+        </div>
+        <div class="card">
+            <img src="static/img/dog.png" alt="Собаки" class="card-icon"> <!-- Здесь добавьте путь к иконке собаки -->
+            <span class="card-title">Собаки</span>
+        </div>
+
+    {% endblock %}
+
+    {% block image_footer_home %}
+
+    <img src="static/img/home-active.png" alt="Главная" class="icon">
+
+    {% endblock %}
